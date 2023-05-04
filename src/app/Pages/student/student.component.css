@@ -1,0 +1,14 @@
+.base {
+  width: 70%;
+  margin: 40px auto;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  margin: 10px;
+  font-size: 14px;
+  width: 95%;
+}

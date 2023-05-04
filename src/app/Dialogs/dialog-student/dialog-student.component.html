@@ -1,0 +1,80 @@
+<h1 mat-dialog-title>{{ action }}</h1>
+<div mat-dialog-content>
+  <form [formGroup]="formStudent">
+    <mat-grid-list cols="2" rowHeight="80px">
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>User Name</mat-label>
+          <input
+            matInput
+            type="text"
+            placeholder="username"
+            formControlName="username"
+            autocomplete="off"
+          />
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input
+            matInput
+            type="text"
+            placeholder="firstName"
+            formControlName="firstName"
+            autocomplete="off"
+          />
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input
+            matInput
+            type="text"
+            placeholder="lastName"
+            formControlName="lastName"
+            autocomplete="off"
+          />
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Career</mat-label>
+          <input
+            matInput
+            type="text"
+            placeholder="career"
+            formControlName="career"
+            autocomplete="off"
+          />
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Age</mat-label>
+          <input
+            matInput
+            type="number"
+            placeholder="age"
+            formControlName="age"
+            autocomplete="off"
+          />
+        </mat-form-field>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close color="warn">Volver</button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="saveStudent()"
+    [disabled]="formStudent.invalid"
+  >
+    {{ buttonAction }}
+  </button>
+</div>
